@@ -10,7 +10,7 @@ Features
 ## Setup Instructions
 
     # Prepare Google Sheets:
-        Create a Google Sheet with the following columns (replace with your data structure):
+        Create a Google Sheet with desired structure
 
     # Google Apps Script:
         Open the Google Sheets file.
