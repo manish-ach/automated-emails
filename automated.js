@@ -5,15 +5,15 @@ function sendEmails() {
 
   for (let i = 1; i < values.length; i++) {
     // Skip header row (i=1)
-    const row = values[i];
-    const rollNo = row[0]; // Assuming roll no is in the first column (index 0)
-    const email = row[3];
-    const studentEmail = row[2]; // Assuming student email is in the third column (index 2)
-    const password = row[4];
-    const subject = "PU 2023 Batch Student email";
-    const body = `Roll no: ${rollNo}\nStudent email: ${studentEmail}\nPassword: ${password}\n\nPlease note: Login with the email using outlook.com, mail providers like gmail will not work.`;
+    const var1 = values[i]; //refers to the ith row
+    const email = "placeholder_email@mail.com"; //the recievers mail
+    const subject = "...email Subject to be sent"; //subjec t content for email
+    const var2 = row[0]; // though it is listed as row it is infact for elements of the column
+    const var3 = row[3];
+    const body = `placeholdertext: ${var2} \n\n placeholdertext2: ${var3}`; //body part in email
 
-    // Send the email (remove password)
-    GmailApp.sendEmail(email, subject, body);
+    // Send the email
+    GmailApp.sendEmail(email, subject, body); //send mail through the email logged in to google sheet
+    //may need to authorize access to google sheet
   }
 }
